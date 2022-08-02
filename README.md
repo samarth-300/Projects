@@ -6,6 +6,6 @@ I would like to feature some of the components that i worked on -->
 
 ![image](https://user-images.githubusercontent.com/101804960/182444181-4adeec45-95d2-4cf7-ad39-c8f75728cd75.png)
 
-![image](https://user-images.githubusercontent.com/101804960/182444809-bef02a17-b6ad-4ac7-9082-86f09a4da461.png)
-
 - Custom file uploader (custom file uploader - file type, number     of files to be uploaded, preview for uploaded files are customizable)
+
+![image](https://user-images.githubusercontent.com/101804960/182444809-bef02a17-b6ad-4ac7-9082-86f09a4da461.png)
