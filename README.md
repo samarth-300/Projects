@@ -1,1 +1,1 @@
-# Consits of components that i developed for a project at my company.
+Components that i worked on for a project at my company.
