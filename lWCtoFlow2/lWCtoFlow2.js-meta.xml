@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>LWC to Flow 2</masterLabel>
+    <targets>
+        <target>lightning__FlowScreen</target>
+        <!-- <target>lightning__RecordPage</target> -->
+    </targets>
+
+    <targetConfigs>
+        <!-- <targetConfig targets="lightning__RecordPage">
+            <property name="accountRecordId" type="String" label="Account RecordId" description="Account record ID to be passed to LWC"/>
+            <property name='Name' label="Account Name" type="String" />
+            <property name='Type' label="Account Type" type="String" />
+            <property name='Industry' label="Industry" type="String" />
+            <property name='AnnualRevenue' label="AnnualRevenue" type="String" />
+            <property name='Phone' label="Phone" type="String" />
+            <property name='Active__c' label="Active__c" type="String" />
+            <property name='Rating' label="Rating" type="String" />
+            <property name='Website' label="Website" type="String" />
+            <property name='Ownership' label="Ownership" type="String" />
+            <property name='CustomerPriority__c' label="CustomerPriority__c" type="String" />
+        </targetConfig> -->
+
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="accountRecordId" type="String" label="Account RecordId" description="Account record ID to be passed to LWC" role="inputOnly"/>
+            <property name='Name' label="Account Name" type="String" />
+            <property name='Type' label="Account Type" type="String" role="outputOnly"/>
+            <property name='Industry' label="Industry" type="String" role="outputOnly"/>
+            <property name='AnnualRevenue' label="AnnualRevenue" type="String" role="outputOnly"/>
+            <property name='Phone' label="Phone" type="String" role="outputOnly"/>
+            <property name='Active__c' label="Active__c" type="String" role="outputOnly"/>
+            <property name='Rating' label="Rating" type="String" role="outputOnly"/>
+            <property name='Website' label="Website" type="String" role="outputOnly"/>
+            <property name='Ownership' label="Ownership" type="String" role="outputOnly"/>
+            <property name='CustomerPriority__c' label="CustomerPriority__c" type="String" role="outputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+
+</LightningComponentBundle>

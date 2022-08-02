@@ -1,0 +1,37 @@
+<template>
+    <lightning-record-edit-form
+        object-api-name={objectApiName}
+        record-id={accountRecordId}
+        layout-type="Full">
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name={Name} value={name_value}></lightning-input-field> 
+                <lightning-input-field field-name={Type} value={Type_value}></lightning-input-field>
+                <lightning-input-field field-name={Industry} value={Industry_value}></lightning-input-field>
+                <lightning-input-field field-name={AnnualRevenue} value={AnnualRevenue_value}></lightning-input-field>
+                <lightning-input-field field-name={Phone} value={Phone_value}></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name={Active__c} value={Active__c_value}></lightning-input-field>
+                <lightning-input-field field-name={Rating} value={Rating_value}></lightning-input-field>
+                <lightning-input-field field-name={Ownership} value={Ownership_value}></lightning-input-field>
+                <lightning-input-field field-name={CustomerPriority__c} value={CustomerPriority__c_value}></lightning-input-field>
+                <lightning-input-field field-name={Website} value={Website_value}></lightning-input-field>
+            </div>
+            
+        </div>    
+        <lightning-input-field field-name={Description} value={Description_value}></lightning-input-field>
+        
+
+        <div class="slds-clearfix">
+            <div class="slds-float_right">
+                <lightning-button class="slds-p-right_small" label="Cancel" onclick={handleReset}></lightning-button>
+                <lightning-button variant="brand" label="Next" onclick={handleSuccess}></lightning-button>
+            </div>
+        </div>
+        <!-- <div class="slds-var-m-top_medium">
+            
+        </div> -->
+
+    </lightning-record-edit-form>
+</template>

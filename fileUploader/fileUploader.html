@@ -1,0 +1,77 @@
+<!--
+    Copyright © 2022 MaxVal Group. All Rights Reserved.
+    Unauthorized copying of this file, via any medium is strictly prohibited
+    Proprietary and confidential
+ -->
+ <template>
+    <lightning-card>
+      <div class="slds-m-horizontal_medium">
+        <lightning-file-upload name="fileUploader" record-id={accountRecordId} label={fileUploadLabel} accept={acceptedFormats}
+          onuploadfinished={handleUploadFinishedmultiple} multiple>
+        </lightning-file-upload>
+      </div>
+      <ul>
+        <!-- template for the datatable part after upload -->
+        <template if:true={loaded}>
+          <div class="slds-clearfix">
+            <div class="slds-align_absolute-center">
+                <lightning-button class='class="slds-p-left_large' variant="destructive-text" label="Delete all files" onclick={handleReset}></lightning-button>
+            </div>
+        </div>
+          <div class="slds-m-around_medium">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+              style="width: 450px;">
+              <thead>
+                <tr>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Name">Name</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Preview">Preview</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Actions">Actions</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <template for:each={files} for:item="file">
+                  <tr key={file.Id}>
+                    <td class="slds-cell-wrap" style="width: 230px;">                  
+                        <div class="slds-col slds-size_1-of-1 slds-float_left" style="word-break:break-all;">{file.Title}</div>                 
+                    </td>
+                    <td style="width: 110px;">
+                      <c-preview-file-thumbnail-card file={file} record-id={accountRecordId} testing={file.fileType}
+                        filename={file.Title}>
+                      </c-preview-file-thumbnail-card>
+                    </td>
+                    <td style="width: 110px;">
+                      <div class="slds-grid slds-wrap" role="none">
+                        <div>
+                          <a href={file.downloadUrl} download>
+                            <lightning-button-icon icon-name="utility:download" title="download"></lightning-button-icon>
+                          </a>
+                        </div>
+                        <div style="padding-left: 10px">
+                          <lightning-button-icon class="custom-class" icon-name="utility:delete" title="delete"
+                            data-id={file.Id} onclick={ondelete}>
+                          </lightning-button-icon>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </template>
+      </ul>
+
+      <div class="slds-clearfix">
+        <div class="slds-float_right">
+            <lightning-button class="slds-p-right_small" label="Previous" onclick={handlePrevious}></lightning-button>
+            <lightning-button variant="brand" label="Submit" onclick={handleGoNext}></lightning-button>
+        </div>
+      </div>
+    </lightning-card>
+  </template>

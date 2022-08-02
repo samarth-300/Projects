@@ -1,0 +1,29 @@
+<!--
+    Copyright © 2022 MaxVal Group. All Rights Reserved.
+    Unauthorized copying of this file, via any medium is strictly prohibited
+    Proprietary and confidential
+ -->
+ <template>
+    <template if:true={file}>
+      <c-preview-file-modal url={file.downloadUrl} file-extension={file.Extension} filename={file.Title}>
+      </c-preview-file-modal>
+      <li class="
+          slds-col
+          slds-var-p-vertical_x-small
+          slds-small-size_1-of-2
+          slds-medium-size_1-of-4
+          slds-large-size_6-of-6
+        ">
+        <div class=slds-text-align_center>
+          <template if:true={forTemplate}>
+            <lightning-icon icon-name={values} size="medium-large" onclick={filePreview} title={titleValue}>
+            </lightning-icon>
+          </template>
+          <template if:false={forTemplate}>
+            <img src={test} title="No Preview" />
+          </template>
+        </div>
+      </li>
+    </template>
+    
+  </template>

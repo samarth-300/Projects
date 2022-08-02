@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen" >
+            <property name="pathLabelString" label="Enter the labels of all the screen" type="String" role="inputOnly" description="Please enter the screen names by comma separated in order"/>
+            <property name="selectedTarget" label="Selected Target" type="String" description="The label of the screen that the user clicked on"/>
+
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

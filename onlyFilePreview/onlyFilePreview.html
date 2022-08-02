@@ -1,0 +1,44 @@
+<!--
+    Copyright © 2022 MaxVal Group. All Rights Reserved.
+    Unauthorized copying of this file, via any medium is strictly prohibited
+    Proprietary and confidential
+ -->
+ <template>
+    <lightning-card>
+        <!-- template for the datatable part after upload -->
+        <template if:true={loaded}>
+          
+          <div class="slds-m-around_medium">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+              style="width: 450px;">
+              <thead>
+                <tr>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Name">Name</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Preview">Preview</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <template for:each={files} for:item="file">
+                  <tr key={file.Id}>
+                    <td class="slds-cell-wrap" style="width: 230px;">                  
+                        <div class="slds-col slds-size_1-of-1 slds-float_left" style="word-break:break-all;">{file.Title}</div>                 
+                    </td>
+                    <td style="width: 110px;">
+                      <c-only-thumbnail file={file} record-id={accountRecordId} testing={file.fileType}
+                        filename={file.Title}>
+                      </c-only-thumbnail>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </template>
+      </ul>
+
+    </lightning-card>
+  </template>

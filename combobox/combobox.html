@@ -1,0 +1,17 @@
+<template>
+    <ul class="slds-listbox slds-listbox_vertical" role="presentation" >
+      <template for:item="record" for:each={records}>
+        <li key={record.Id}
+          class="slds-listbox__item"
+          role="presentation" >
+  
+          <c-combobox-option record={record}
+            first-field={firstField}
+            second-field={secondField}
+            third-field={thirdField}
+            active-id={activeId}
+            onselected={handleSelected} ></c-combobox-option>
+        </li>
+      </template>
+    </ul>
+  </template>

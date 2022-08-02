@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Test component LWC to Flow">
+        <lightning-record-form
+            object-api-name={objectApiName}
+            record-id={accountRecordId}
+            fields={fields}
+            columns="2"
+            onsuccess={handleSubmit}>
+        </lightning-record-form>
+    </lightning-card>
+</template>
