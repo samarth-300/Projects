@@ -1,7 +1,3 @@
-// Copyright © 2022 MaxVal Group. All Rights Reserved.
-// Unauthorized copying of this file, via any medium is strictly prohibited
-// Proprietary and confidential
-
 import { LightningElement, api, track } from "lwc";
 
 export default class PreviewFileThumbnailCard extends LightningElement {
