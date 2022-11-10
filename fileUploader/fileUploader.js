@@ -1,7 +1,3 @@
-// Copyright © 2022 MaxVal Group. All Rights Reserved.
-// Unauthorized copying of this file, via any medium is strictly prohibited
-// Proprietary and confidential
-
 import { LightningElement, api, track, wire } from "lwc";
 import { deleteRecord } from 'lightning/uiRecordApi';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
